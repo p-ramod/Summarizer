@@ -1,6 +1,9 @@
 spring:
   application:
     name: summarizer
+  docker:
+    compose:
+      enabled: false
   datasource:
     url: jdbc:postgresql://localhost:5432/demo
     username: demo
@@ -17,3 +20,6 @@ security:
   jwt:
     secret: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
     expiration-minutes: 60
+
+claude:
+  api-key: ${CLAUDE_API_KEY:}
